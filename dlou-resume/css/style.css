@@ -272,6 +272,7 @@ ul {
     margin-bottom: 30px;
     text-align: justify;
 }
+
 /* 教育背景 */
 .education-card {
     display: grid;
@@ -449,6 +450,7 @@ ul {
     color: var(--secondary-color);
     margin-left: 5px;
 }
+
 /* 获奖荣誉 */
 .awards-content {
     display: grid;
@@ -533,13 +535,12 @@ ul {
     font-size: 14px;
     color: var(--light-text);
 }
-
-/* 联系方式 */
+/* 联系方式（美化后） */
 .contact-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .contact-card {
@@ -583,23 +584,36 @@ ul {
     text-decoration: underline;
 }
 
+/* 二维码容器美化 */
+.contact-qrcode-wrap {
+    display: flex;
+    justify-content: center;
+}
+
 .contact-qrcode {
     text-align: center;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    width: fit-content;
 }
 
 .contact-qrcode img {
     width: 200px;
     height: 200px;
-    border: 5px solid #fff;
-    box-shadow: var(--shadow);
+    border: 5px solid #f0f5ff;
+    box-shadow: 0 4px 15px rgba(22, 93, 255, 0.1);
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .contact-qrcode p {
     font-size: 16px;
     color: var(--primary-color);
     font-weight: 500;
+    margin: 0;
 }
 
 /* 页脚 */
@@ -685,6 +699,10 @@ ul {
     }
     .section-title {
         font-size: 28px;
+    }
+    .contact-qrcode img {
+        width: 150px;
+        height: 150px;
     }
 }
 
